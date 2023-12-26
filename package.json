@@ -1,6 +1,6 @@
 {
   "name": "fastify-swc-typescript-server-bootstrap-cli",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A CLI tool for bootstrapping Fastify SWC server projects.",
   "main": "init.js",
   "scripts": {
@@ -22,5 +22,8 @@
   "repository": {
     "type": "git",
     "url": "git+https://github.com/matt-development-work/fastify-swc-typescript-server-bootstrap-cli.git"
+  },
+  "publishConfig": {
+    "@matt-development-work:registry": "https://npm.pkg.github.com"
   }
 }
