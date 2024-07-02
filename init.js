@@ -12,7 +12,7 @@ if (!projectName) {
 
 // Clone the repository
 shell.exec(
-  `git clone git@github.com:matt-development-work/fastify-swc-typescript-server.git ${projectName}`
+  `git clone git@github.com:mattfsourcecode/fastify-swc-typescript-server.git ${projectName}`
 );
 
 // Navigate to the cloned directory

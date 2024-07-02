@@ -32,7 +32,7 @@ fastify-swc-server my-server-app
 
 ## What it Does Currently
 
-- Clones a Fastify SWC server template from [this repository](https://github.com/matt-development-work/fastify-swc-typescript-server).
+- Clones a Fastify SWC server template from [this repository](https://github.com/mattfsourcecode/fastify-swc-typescript-server).
 - Removes the original `.git` directory from the cloned repository and initializes a new git repository, allowing for a clean version control start.
 - Updates the `package.json` with the specified project name and clears the author field.
 - Implements a testing suite using [Mocha](https://mochajs.org/) and [Chai](https://www.chaijs.com/), integrating [Husky](https://typicode.github.io/husky/) as a pre-commit hook, ensuring that all tests must pass successfully before changes can be committed.
