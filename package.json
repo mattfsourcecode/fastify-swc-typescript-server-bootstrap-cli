@@ -21,6 +21,6 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/matt-development-work/fastify-swc-typescript-server-bootstrap-cli.git"
+    "url": "git+https://github.com/mattfsourcecode/fastify-swc-typescript-server-bootstrap-cli.git"
   }
 }
