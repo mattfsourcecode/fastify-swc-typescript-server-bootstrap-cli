@@ -1,6 +1,6 @@
 {
   "name": "fastify-swc-typescript-server-bootstrap-cli",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A CLI tool for bootstrapping Fastify SWC server projects.",
   "main": "init.js",
   "scripts": {
@@ -11,10 +11,10 @@
     "shelljs": "^0.8.5"
   },
   "devDependencies": {
-    "chai": "^4.4.1",
+    "chai": "^4.5.0",
     "husky": "^8.0.3",
-    "mocha": "^10.6.0",
-    "rimraf": "^5.0.7"
+    "mocha": "^10.7.3",
+    "rimraf": "^5.0.10"
   },
   "bin": {
     "fastify-swc-server": "init.js"
