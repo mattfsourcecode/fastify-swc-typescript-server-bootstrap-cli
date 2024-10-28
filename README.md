@@ -6,8 +6,6 @@ A command-line interface tool for streamlining the creation of new server projec
 
 ## Install globally
 
-### npm
-
 ```bash
 npm i -g fastify-swc-typescript-server-bootstrap-cli
 ```
@@ -24,8 +22,9 @@ Replace `[project-name]` with the name for your new project. This creates a new 
 
 ## What it Does Currently
 
-- Clones a Fastify SWC server boilerplate from [this repository](https://github.com/mattfsourcecode/fastify-swc-typescript-server).
+- Clones a Fastify SWC Jest server boilerplate from [this repository](https://github.com/mattfsourcecode/fastify-swc-typescript-server).
 - Removes the original `.git` directory from the cloned repository and initializes a new git repository, allowing for a clean version control start.
 - Updates the `package.json` with the specified project name and clears the author field.
-- Implements a testing suite using [Mocha](https://mochajs.org/) and [Chai](https://www.chaijs.com/), integrating [Husky](https://typicode.github.io/husky/) as a pre-commit hook, ensuring that all tests must pass successfully before changes can be committed.
 - More customizations to be added...
+
+_The module's codebase uses a testing suite with [Mocha](https://mochajs.org/) and [Chai](https://www.chaijs.com/), integrating [Husky](https://typicode.github.io/husky/) as a pre-commit hook, ensuring that all tests must pass successfully before changes can be committed._
