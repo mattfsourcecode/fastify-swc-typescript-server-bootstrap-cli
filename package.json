@@ -1,6 +1,6 @@
 {
   "name": "fastify-swc-typescript-server-bootstrap-cli",
-  "version": "1.0.11",
+  "version": "1.0.12",
   "description": "CLI tool that accelerates the creation of new server projects using Fastify with SWC and Jest",
   "repository": {
     "type": "git",
