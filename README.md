@@ -30,3 +30,5 @@ Replace `[project-name]` with the name for your new project. This creates a new 
 - More customizations to be added...
 
 _The [module's codebase](https://github.com/mattfsourcecode/fastify-swc-typescript-server-bootstrap-cli) uses a testing suite with [Mocha](https://mochajs.org/) and [Chai](https://www.chaijs.com/), integrating [Husky](https://typicode.github.io/husky/) as a pre-commit hook, ensuring that all tests must pass successfully before staged changes can be committed._
+
+<img width="300" alt="logo" src="https://github.com/user-attachments/assets/a6907512-87a4-45de-9188-cdc494dfe5a8">
