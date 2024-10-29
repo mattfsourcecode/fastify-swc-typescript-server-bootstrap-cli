@@ -2,7 +2,9 @@
 
 ## Overview
 
-A command-line interface tool for streamlining the creation of new server projects using [Fastify](https://fastify.dev/) with [SWC](https://swc.rs/) and [Jest](https://jestjs.io/).
+A command-line interface tool for creating new server projects using [Fastify](https://fastify.dev/) with [SWC](https://swc.rs/) and [Jest](https://jestjs.io/).
+
+**Note: This module requires SSH access to GitHub to clone a repository. If you do not already have SSH configured for GitHub, please follow the instructions on GitHub's [Connecting to GitHub with SSH](https://docs.github.com/en/authentication/connecting-to-github-with-ssh) documentation to set up SSH keys for your account.**
 
 ## Install globally
 
@@ -27,4 +29,4 @@ Replace `[project-name]` with the name for your new project. This creates a new 
 - Updates the `package.json` with the specified project name and clears the author field.
 - More customizations to be added...
 
-_The module's codebase uses a testing suite with [Mocha](https://mochajs.org/) and [Chai](https://www.chaijs.com/), integrating [Husky](https://typicode.github.io/husky/) as a pre-commit hook, ensuring that all tests must pass successfully before changes can be committed._
+_The [module's codebase](https://github.com/mattfsourcecode/fastify-swc-typescript-server-bootstrap-cli) uses a testing suite with [Mocha](https://mochajs.org/) and [Chai](https://www.chaijs.com/), integrating [Husky](https://typicode.github.io/husky/) as a pre-commit hook, ensuring that all tests must pass successfully before staged changes can be committed._
