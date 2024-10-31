@@ -1,7 +1,9 @@
 {
   "name": "fastify-swc-typescript-server-bootstrap-cli",
-  "version": "1.0.13",
+  "version": "1.0.14",
   "description": "CLI tool that accelerates the creation of new server projects using Fastify with SWC and Jest",
+  "main": "init.js",
+  "license": "MIT",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/mattfsourcecode/fastify-swc-typescript-server-bootstrap-cli.git"
@@ -9,10 +11,9 @@
   "bugs": {
     "url": "https://github.com/mattfsourcecode/fastify-swc-typescript-server-bootstrap-cli/issues"
   },
-  "main": "init.js",
-  "scripts": {
-    "test": "mocha 'tests/**/*.js'",
-    "prepare": "husky install"
+  "author": {
+    "name": "@mattfsourcecode",
+    "url": "https://github.com/mattfsourcecode"
   },
   "keywords": [
     "fastify",
@@ -26,13 +27,17 @@
     "boilerplate",
     "fastify-server",
     "typescript-server",
-    "testing"
+    "testing",
+    "ssh",
+    "microservices",
+    "api",
+    "rest",
+    "serverless"
   ],
-  "author": {
-    "name": "@mattfsourcecode",
-    "url": "https://github.com/mattfsourcecode"
+  "scripts": {
+    "test": "mocha 'tests/**/*.js'",
+    "prepare": "husky install"
   },
-  "license": "MIT",
   "dependencies": {
     "shelljs": "^0.8.5"
   },
