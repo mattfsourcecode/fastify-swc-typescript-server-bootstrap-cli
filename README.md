@@ -32,6 +32,19 @@ Replace `[project-name]` with the intended name for the project. This creates a 
 <br>
 <img width="300" alt="logo" src="https://github.com/user-attachments/assets/a6907512-87a4-45de-9188-cdc494dfe5a8">
 
+## Licensing
+
+This project is licensed under the MIT License.
+
+### Third-Party Licenses
+
+The repository uses some third-party dependencies under other licenses:
+
+- BSD-3-Clause
+- ISC
+
+The full texts of these licenses are included in the repository.
+
 ## Contributions and Issues
 
 Contributions are welcome! If you have ideas for improvements, please open an issue first for discussion before submitting a pull request.
