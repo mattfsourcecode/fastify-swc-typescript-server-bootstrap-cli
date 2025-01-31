@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-const shell = require("shelljs");
+const { execaSync } = require("execa");
 const fs = require("fs");
 const path = require("path");
 
@@ -11,18 +11,24 @@ if (!projectName) {
 }
 
 // Clone the repository
-shell.exec(
-  `git clone git@github.com:mattfsourcecode/fastify-swc-typescript-server.git ${projectName}`
+execaSync(
+  "git",
+  [
+    "clone",
+    "git@github.com:mattfsourcecode/fastify-swc-typescript-server.git",
+    projectName,
+  ],
+  { stdio: "inherit" }
 );
 
 // Navigate to the cloned directory
-shell.cd(projectName);
+process.chdir(projectName);
 
 // Remove the original .git directory
-shell.rm("-rf", ".git");
+fs.rmSync(".git", { recursive: true, force: true });
 
 // Initialize a new git repository
-shell.exec("git init");
+execaSync("git", ["init"], { stdio: "inherit" });
 
 // Update package.json
 const packageJsonPath = path.join(process.cwd(), "package.json");
