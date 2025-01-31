@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-const { execaSync } = require("execa");
+const { execSync } = require("child_process");
 const fs = require("fs");
 const path = require("path");
 
@@ -11,13 +11,8 @@ if (!projectName) {
 }
 
 // Clone the repository
-execaSync(
-  "git",
-  [
-    "clone",
-    "git@github.com:mattfsourcecode/fastify-swc-typescript-server.git",
-    projectName,
-  ],
+execSync(
+  `git clone git@github.com:mattfsourcecode/fastify-swc-typescript-server.git ${projectName}`,
   { stdio: "inherit" }
 );
 
@@ -28,7 +23,7 @@ process.chdir(projectName);
 fs.rmSync(".git", { recursive: true, force: true });
 
 // Initialize a new git repository
-execaSync("git", ["init"], { stdio: "inherit" });
+execSync("git init", { stdio: "inherit" });
 
 // Update package.json
 const packageJsonPath = path.join(process.cwd(), "package.json");
@@ -37,3 +32,5 @@ packageJson.name = projectName; // Update the project name
 packageJson.author = ""; // Clear the author
 
 fs.writeFileSync(packageJsonPath, JSON.stringify(packageJson, null, 2)); // Write back to package.json
+
+console.log(`Project "${projectName}" has been successfully bootstrapped.`);
