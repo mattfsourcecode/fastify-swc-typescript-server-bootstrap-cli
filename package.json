@@ -4,6 +4,9 @@
   "description": "CLI tool that accelerates the creation of new server projects using Fastify with SWC and Jest",
   "main": "init.js",
   "license": "MIT",
+  "engines": {
+    "node": ">=18.0.0"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/mattfsourcecode/fastify-swc-typescript-server-bootstrap-cli.git"
