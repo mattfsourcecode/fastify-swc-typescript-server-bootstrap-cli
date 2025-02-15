@@ -10,11 +10,19 @@ if (!projectName) {
   process.exit(1);
 }
 
-// Clone the repository
-execSync(
-  `git clone git@github.com:mattfsourcecode/fastify-swc-typescript-server.git ${projectName}`,
-  { stdio: "inherit" }
-);
+let gitUrl;
+
+// Try cloning using SSH first
+try {
+  console.log("Attempting to clone via SSH...");
+  gitUrl = `git@github.com:mattfsourcecode/fastify-swc-typescript-server.git`;
+  execSync(`git clone ${gitUrl} ${projectName}`, { stdio: "inherit" });
+} catch (sshError) {
+  // If SSH fails, fall back to HTTPS
+  console.error("SSH cloning failed, falling back to HTTPS...");
+  gitUrl = `https://github.com/mattfsourcecode/fastify-swc-typescript-server.git`;
+  execSync(`git clone ${gitUrl} ${projectName}`, { stdio: "inherit" });
+}
 
 // Navigate to the cloned directory
 process.chdir(projectName);

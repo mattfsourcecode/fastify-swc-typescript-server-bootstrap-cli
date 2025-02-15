@@ -4,8 +4,6 @@
 
 A command-line tool for creating new server projects using [Fastify](https://fastify.dev/) with [SWC](https://swc.rs/) and [Jest](https://jestjs.io/).
 
-**Note: This module requires SSH access to GitHub to clone [this repository](https://github.com/mattfsourcecode/fastify-swc-typescript-server). If you do not already have SSH configured for GitHub, please follow the instructions on GitHub's [Connecting to GitHub with SSH](https://docs.github.com/en/authentication/connecting-to-github-with-ssh) documentation to set up SSH keys for your account.**
-
 ## Install globally
 
 ```bash
