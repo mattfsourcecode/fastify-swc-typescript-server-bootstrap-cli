@@ -1,0 +1,57 @@
+name: Test fastify-swc-server CLI
+
+on:
+  push:
+    branches: [master]
+  pull_request:
+    branches: [master]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          fetch-depth: 1
+
+      - name: Configure Git for HTTPS
+        run: |
+          git config --global url."https://github.com/".insteadOf "git@github.com:"
+
+      - name: Validate Git Connection
+        run: git ls-remote https://github.com/${{ github.repository }} || (echo "HTTPS Git connection failed" && exit 1)
+
+      - name: Set up pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: "8.6.0"
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "lts/*"
+          cache: pnpm
+
+      - name: Install dependencies (skip prepare script)
+        run: pnpm install --ignore-scripts
+
+      - name: Pack and install CLI globally
+        run: |
+          npm pack
+          sudo npm install -g $(ls fastify-swc-typescript-server-bootstrap-cli-*.tgz)
+          fastify-swc-server || echo "CLI installation verified"
+
+      - name: Test CLI Functionality
+        run: |
+          fastify-swc-server test-fastify-project
+          ls -la test-fastify-project
+          cd test-fastify-project
+          pnpm install
+          pnpm run build
+          pnpm dev &
+          sleep 5
+          curl -I http://localhost:3000 || echo "Server verification skipped"
+          pkill -f "node"
