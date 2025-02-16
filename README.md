@@ -20,35 +20,11 @@ fastify-swc-server [project-name]
 
 Replace `[project-name]` with the intended name for the project. This creates a new directory with the specified name, clones the Fastify SWC server repo, and configures the project accordingly.
 
-## Current Features
-
-- Clones a boilerplate from [this repository](https://github.com/mattfsourcecode/fastify-swc-typescript-server).
-- Removes the original `.git` directory and initializes a new git repository for a clean version control start.
-- Updates the `package.json` with the specified project name and resets the author value to an empty string.
-- More customizations to be added...
-
 <br>
-<img width="300" alt="logo" src="https://github.com/user-attachments/assets/a6907512-87a4-45de-9188-cdc494dfe5a8">
-
-## Licensing
-
-This project is licensed under the MIT License.
-
-### Third-Party Licenses
-
-The repository uses some third-party dependencies under other licenses:
-
-- BSD-3-Clause
-- ISC
-
-The full texts of these licenses are included in the repository.
+<img width="300" alt="logo" src="https://github.com/user-attachments/assets/ee70394a-ac30-45d5-8dc9-a100f71f9819">
 
 ## Contributions and Issues
 
-Contributions are welcome! If you have ideas for improvements, please open an issue first for discussion before submitting a pull request.
-
-NOTE: The [npm module's codebase](https://github.com/mattfsourcecode/fastify-swc-typescript-server-bootstrap-cli) uses a testing suite with [Mocha](https://mochajs.org/) and [Chai](https://www.chaijs.com/), integrating [Husky](https://typicode.github.io/husky/) as a pre-commit [git hook](https://git-scm.com/book/ms/v2/Customizing-Git-Git-Hooks) to ensure all tests pass before staged changes can be committed.
-
-You can report issues or start discussions here: [Open an issue](https://github.com/mattfsourcecode/fastify-swc-typescript-server-bootstrap-cli/issues)
+Contributions are welcome! If you have ideas for improvements, [open an issue](https://github.com/mattfsourcecode/fastify-swc-typescript-server-bootstrap-cli/issues).
 
 For contributions and issues regarding the [codebase cloned](https://github.com/mattfsourcecode/fastify-swc-typescript-server) with the `fastify-swc-server` command, [open an issue here](https://github.com/mattfsourcecode/fastify-swc-typescript-server/issues).
