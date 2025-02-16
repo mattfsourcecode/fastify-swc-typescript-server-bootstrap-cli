@@ -55,3 +55,6 @@ jobs:
           sleep 5
           curl -I http://localhost:3000 || echo "Server verification skipped"
           pkill -f "node"
+
+      - name: Test npm publish
+        run: npm publish --dry-run
