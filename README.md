@@ -21,7 +21,7 @@ fastify-swc-server [project-name]
 Replace `[project-name]` with the intended name for the project. This creates a new directory with the specified name, clones the Fastify SWC server repo, and configures the project accordingly.
 
 <br>
-<img width="300" alt="logo" src="https://github.com/user-attachments/assets/ee70394a-ac30-45d5-8dc9-a100f71f9819">
+<img width="300" alt="Large metal and wood 'JS' letters standing on the forest floor, surrounded by fallen leaves and moss-covered tree roots, with a misty forest background." src="https://github.com/user-attachments/assets/073c2d3d-46f5-427e-8876-74da61c5ce61">
 
 ## Contributions and Issues
 
